@@ -41,6 +41,7 @@ h1 {
   position: relative;
   align-items: stretch;
   width: 40%;
+  float: left;
 }
 
 #fight-form {
@@ -114,7 +115,8 @@ select {
 }
 
 .teams,
-.winner {
+.winner,
+#rating-display {
   position: absolute; right: 0;
   padding: 0.25rem 5rem 0.25rem 1rem;
   background-color: rgba(255, 255, 255, 0.8);
@@ -123,6 +125,11 @@ select {
 .teams {
   bottom: 250px;
   float: right;
+}
+
+#rating-display {
+  bottom: 180px;
+  float: right
 }
 
 .winner {

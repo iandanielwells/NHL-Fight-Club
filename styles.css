@@ -45,7 +45,7 @@ h1 {
 }
 
 #fight-form {
-  margin: 5rem 0;
+  margin: 10rem 0;
   width: 300px;
   flex-direction: column;
   padding: 20px;
@@ -101,24 +101,27 @@ select {
 .winner,
 #rating-display {
   position: absolute; right: 0;
-  padding: 0.25rem 5rem 0.25rem 1rem;
+  padding: 0.50rem 10rem 0.50rem 2rem;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .teams {
-  bottom: 250px;
+  position: absolute;
+  bottom: 300px;
   float: right;
   border-radius: 30px
 }
 
 #rating-display {
-  bottom: 180px;
+  position: absolute;
+  bottom: 235px;
   float: right;
   border-radius: 30px
 }
 
 .winner {
-  bottom: 200px;
+  position: absolute;
+  bottom: 260px;
   float: right;
   border-radius: 30px
 }

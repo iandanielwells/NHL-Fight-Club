@@ -1,4 +1,5 @@
 let h4_2 = document.createElement('h4');
+const emptyh3 = document.createElement('h3');
 
 fetch('http://localhost:3000/logos')
 .then(resp => resp.json())
@@ -18,6 +19,8 @@ fetch('http://localhost:3000/logos')
             newImg.width = 50;
             const h2 = document.createElement('h2');
             h2.textContent = logo.name;
+
+
             showData.append(h2, newImg);
             
             fetch('https://statsapi.web.nhl.com/api/v1/teams?expand=team.stats')
@@ -31,7 +34,7 @@ fetch('http://localhost:3000/logos')
                     h2.textContent = `Record: ${teamData.teams[0].teamStats[0].splits[0].stat.wins}-${teamData.teams[0].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`;
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[0].conference.name} (${teamData.teams[0].division.name})`;
-                    showData.append(h4_2, h2, h3_2, h3);
+                    showData.append(h2, h3_2, h3);
                 } else if (logo.name === teamData.teams[1].name) {
                     const h3 = document.createElement('h3');
                     h3.textContent = `${teamData.teams[1].venue.name} (${teamData.teams[1].venue.city})`;
@@ -376,29 +379,28 @@ fetch('http://localhost:3000/logos')
                         event.preventDefault();
 
                         
-                        h4 = document.createElement('h4');
+                        const h4 = document.createElement('h4');
+                        h4.setAttribute('class', 'fight-details-info');
+                        
 
-                        const tempFightInput = document.querySelector('.fight-input').value;
-                        const tempWinnerInput = document.querySelector('.fight-winner').value;
-                        const temphighlightInput = document.querySelector('.fight-url').value;
-                        const tempRatings = document.querySelector('.rating').value;
+                        const tempFightInput = document.querySelector('.fight-input');
+                        const tempWinnerInput = document.querySelector('.fight-winner');
+                        const temphighlightInput = document.querySelector('.fight-url');
+                        const tempRatings = document.querySelector('.rating');
 
                         
-                        const a = document.createElement('a');
-                        a.href = 'www.youtube.com/watch?v=ioCy2fyHK6Y';
-                        a.setAttribute('href', 'https://www.youtube.com/watch?v=ioCy2fyHK6Y');
+                    
 
-
-                        h4.textContent = 'Winner: ' + tempWinnerInput + ' (' + a + ') ' + tempFightInput + 'Rating: ' + tempRatings;
+                        h4.textContent = `Winner:   ${tempWinnerInput.value}   (  ${temphighlightInput.value}  )   ${tempFightInput.value}  rating:  + ${tempRatings}`;
                         showData.append(h4);
-                        h4_2 = h4;
+                        h_4 = h4;
 
                         fightForm.reset();
                         fightForm.textContent = "";
 
                     })
 
-                    showData.append(fightForm);
+                    showData.append(fightForm, h4_2);
                 })
                 showData.append(fightNumber, fightIncrementer);
         })

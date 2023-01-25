@@ -44,6 +44,7 @@
     height: auto;
     float: inline-start;
     text-align: center;
+    clear: right;
   }
   
   #fight-form {
@@ -126,4 +127,15 @@
     bottom: 200px;
     float: right;
     border-radius: 30px
+  }
+
+  #twitter {
+    float: right;
+    position: relative;
+    height: auto;
+    width: 30%;
+    float: inline-start;
+    clear: right;
+
+
   }

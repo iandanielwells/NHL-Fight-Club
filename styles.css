@@ -1,6 +1,6 @@
 #Logosgohere {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     max-width: 20%;
     float: left;
@@ -15,6 +15,7 @@
     flex: 0 1 auto;
     height: 50px;
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     cursor: pointer;
@@ -24,18 +25,13 @@
     background-color: rgb(109, 140, 180);
   }
   
-  h1 {
-    text-align: center;
-    font-family: "Arial Black", sans-serif;
-    font-size: 4.5em;
-    letter-spacing: -1px;
-    background-color: black;
-    color: white;
-  }
-
-  body.dark {
-    background-color: black;
-    color: white;
+h1 {
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 4.5em;
+  letter-spacing: -1px;
+  background-color: black;
+  color: white;
 }
   
   #show-data {
@@ -44,12 +40,16 @@
     display: block;
     margin: auto;
     position: relative;
-    align-items: stretch;
-    width: 40%;
+    align-items: center;
+    width: 35%;
+    height: auto;
+    float: inline-start;
+    text-align: center;
+    clear: right;
   }
   
   #fight-form {
-    margin: 10rem 0;
+    margin: 5rem 0;
     width: 300px;
     flex-direction: column;
     padding: 20px;
@@ -79,6 +79,7 @@
     transition: all 0.3s;
     border-radius: 10px;
     align-items: center;
+    width: 70%;
   }
   
   input[type="submit"]:active {
@@ -91,46 +92,42 @@
     padding: 10px;
   }
   
-  #uploads {
-    display: flex;
-    overflow-x: auto;
-    margin: 1rem 0;
-    max-width: calc(100vw - 2rem);
-  }
-  
-  #uploads img {
-    flex: 0 1 auto;
-    height: 150px;
-    margin-right: 0.5rem;
-    cursor: pointer;
-  }
-  
-  #uploads img:last-child {
-    margin-right: 0;
-  }
-  
-  #fight-details {
+  /* .teams,
+  .winner,
+  #rating-display {
+    position: relative;
     float: right;
-  }
-  
-  .image-detail {
-    height: 300px;
-    float: right
-  }
-  
-  .teams,
-  .winner {
-    position: absolute; right: 0;
+    clear: right;
     padding: 0.25rem 5rem 0.25rem 1rem;
     background-color: rgba(255, 255, 255, 0.8);
+  } */
+  
+  .fight-winner {
+    border-radius: 10px;
+    width: 70%;
   }
   
-  .teams {
-    bottom: 250px;
+  #rating-display {
+    bottom: 180px;
     float: right;
+    border-radius: 10px
   }
   
-  .winner {
-    bottom: 200px;
-    float: right
+  .fight-input {
+    border-radius: 10px;
+    width: 70%;
+  }
+
+  .fight-url {
+    border-radius: 10px;
+    width: 70%;
+  }
+
+  #twitter {
+    float: right;
+    position: relative;
+    height: auto;
+    width: 30%;
+    float: inline-start;
+    clear: right;
   }

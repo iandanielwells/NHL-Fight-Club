@@ -30,6 +30,39 @@ let h4_28 = document.createElement('h4');
 let h4_29 = document.createElement('h4');
 let h4_30 = document.createElement('h4');
 let h4_31 = document.createElement('h4');
+const container_0 = document.querySelector('#container-0');
+const container_1 = document.querySelector('#container-1');
+const container_2 = document.querySelector('#container-2');
+const container_3 = document.querySelector('#container-3');
+const container_4 = document.querySelector('#container-4');
+const container_5 = document.querySelector('#container-5');
+const container_6 = document.querySelector('#container-6');
+const container_7 = document.querySelector('#container-7');
+const container_8 = document.querySelector('#container-8');
+const container_9 = document.querySelector('#container-9');
+const container_10 = document.querySelector('#container-10');
+const container_11 = document.querySelector('#container-11');
+const container_12 = document.querySelector('#container-12');
+const container_13 = document.querySelector('#container-13');
+const container_14 = document.querySelector('#container-14');
+const container_15 = document.querySelector('#container-15');
+const container_16 = document.querySelector('#container-16');
+const container_17= document.querySelector('#container-17');
+const container_18 = document.querySelector('#container-18');
+const container_19 = document.querySelector('#container-19');
+const container_20 = document.querySelector('#container-20');
+const container_21 = document.querySelector('#container-21');
+const container_22 = document.querySelector('#container-22');
+const container_23 = document.querySelector('#container-23');
+const container_24 = document.querySelector('#container-24');
+const container_25 = document.querySelector('#container-25');
+const container_26 = document.querySelector('#container-26');
+const container_27 = document.querySelector('#container-27');
+const container_28 = document.querySelector('#container-28');
+const container_29 = document.querySelector('#container-29');
+const container_30 = document.querySelector('#container-30');
+const container_31 = document.querySelector('#container-31');
+
 
 
 fetch('http://localhost:3000/logos')
@@ -40,6 +73,9 @@ fetch('http://localhost:3000/logos')
         const img = document.createElement('img');
         img.src = logo.image;
         logosNav.append(img);
+        img.addEventListener('mouseover', () => {
+            img.title = logo.name;
+        })
 
         img.addEventListener('click', (event) => {
             const newImg = document.createElement('img')
@@ -178,8 +214,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_0 = h4_original;
+                        container_0.append(h4_0);
 
-                        showData.append(h4_0);
+                        showData.append(container_0);
 
                         fightForm.reset();
 
@@ -187,9 +224,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_0);
+                    showData.append(fightForm, container_0);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_0);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_0);
 
 
                 } else if (logo.name === teamData.teams[1].name) {
@@ -308,8 +345,8 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_1 = h4;
-
-                        showData.append(h4_1);
+                        container_1.append(h4_1);
+                        showData.append(container_1);
 
                         fightForm.reset()
                         ;
@@ -317,9 +354,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_1);
+                    showData.append(fightForm, container_1);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_1);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_1);
 
 
                 } else if (logo.name === teamData.teams[2].name) {
@@ -438,8 +475,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_2 = h4;
+                        container_2.append(h4_2);
 
-                        showData.append(h4_2);
+                        showData.append(container_2);
 
                         fightForm.reset()
                         ;
@@ -447,9 +485,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_2);
+                    showData.append(fightForm, container_2);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_2);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_2);
 
 
                 } else if (logo.name === teamData.teams[3].name) {
@@ -568,8 +606,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_3 = h4;
+                        container_3.append(h4_3);
 
-                        showData.append(h4_3);
+                        showData.append(container_3);
 
                         fightForm.reset()
                         ;
@@ -577,9 +616,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_3);
+                    showData.append(fightForm, container_3);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_3);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_3);
 
 
                 } else if (logo.name === teamData.teams[4].name) {
@@ -698,8 +737,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_4 = h4;
+                        container_4.append(h4_4);
 
-                        showData.append(h4_4);
+                        showData.append(container_4);
 
                         fightForm.reset()
                         ;
@@ -707,9 +747,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_4);
+                    showData.append(fightForm, container_4);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_4);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_4);
 
 
                 } else if (logo.name === teamData.teams[5].name) {
@@ -828,8 +868,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_5 = h4;
+                        container_5.append(h4_5);
 
-                        showData.append(h4_5);
+                        showData.append(container_5);
 
                         fightForm.reset()
                         ;
@@ -837,9 +878,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_5);
+                    showData.append(fightForm, container_5);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_5);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_5);
 
 
                 } else if (logo.name === teamData.teams[6].name) {
@@ -958,8 +999,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_6 = h4;
+                        container_6.append(h4_6);
 
-                        showData.append(h4_6);
+                        showData.append(container_6);
 
                         fightForm.reset()
                         ;
@@ -967,9 +1009,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_6);
+                    showData.append(fightForm, container_6);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_6);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_6);
 
 
                 } else if (logo.name === teamData.teams[7].name) {
@@ -1088,8 +1130,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_7 = h4;
+                        container_7.append(h4_7);
 
-                        showData.append(h4_7);
+                        showData.append(container_7);
 
                         fightForm.reset()
                         ;
@@ -1097,9 +1140,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_7);
+                    showData.append(fightForm, container_7);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_7);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_7);
 
 
                 } else if (logo.name === teamData.teams[8].name) {
@@ -1218,8 +1261,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_8 = h4;
+                        container_8.append(h4_8);
 
-                        showData.append(h4_8);
+                        showData.append(container_8);
 
                         fightForm.reset()
                         ;
@@ -1227,9 +1271,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_8);
+                    showData.append(fightForm, container_8);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_8);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_8);
 
 
                 } else if (logo.name === teamData.teams[9].name) {
@@ -1348,8 +1392,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_9 = h4;
+                        container_9.append(h4_9);
 
-                        showData.append(h4_9);
+                        showData.append(container_9);
 
                         fightForm.reset()
                         ;
@@ -1357,9 +1402,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_9);
+                    showData.append(fightForm, container_9);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_9);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_9);
 
 
                 } else if (logo.name === teamData.teams[10].name) {
@@ -1478,8 +1523,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_10 = h4;
+                        container_10.append(h4_10)
 
-                        showData.append(h4_10);
+                        showData.append(container_10);
 
                         fightForm.reset()
                         ;
@@ -1487,9 +1533,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_10);
+                    showData.append(fightForm, container_10);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_10);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_10);
 
 
                 } else if (logo.name === teamData.teams[11].name) {
@@ -1608,8 +1654,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_11 = h4;
+                        container_11.append(h4_11);
 
-                        showData.append(h4_11);
+                        showData.append(container_11);
 
                         fightForm.reset()
                         ;
@@ -1617,9 +1664,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_11);
+                    showData.append(fightForm, container_11);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_11);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_11);
 
 
                 } else if (logo.name === teamData.teams[12].name) {
@@ -1738,8 +1785,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_12 = h4;
+                        container_12.append(h4_12);
 
-                        showData.append(h4_12);
+                        showData.append(container_12);
 
                         fightForm.reset()
                         ;
@@ -1747,9 +1795,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_12);
+                    showData.append(fightForm, container_12);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_12);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_12);
 
 
                 } else if (logo.name === teamData.teams[13].name) {
@@ -1868,8 +1916,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_13 = h4;
+                        container_13.append(h4_13);
 
-                        showData.append(h4_13);
+                        showData.append(container_13);
 
                         fightForm.reset()
                         ;
@@ -1877,9 +1926,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_13);
+                    showData.append(fightForm, container_13);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_13);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_13);
 
 
                 } else if (logo.name === teamData.teams[14].name) {
@@ -1998,8 +2047,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_14 = h4;
+                        container_14.append(h4_14);
 
-                        showData.append(h4_14);
+                        showData.append(container_14);
 
                         fightForm.reset()
                         ;
@@ -2007,9 +2057,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_14);
+                    showData.append(fightForm, container_14);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_14);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_14);
 
 
                 } else if (logo.name === teamData.teams[15].name) {
@@ -2128,8 +2178,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_15 = h4;
+                        container_15.append(h4_15);
 
-                        showData.append(h4_15);
+                        showData.append(container_15);
 
                         fightForm.reset()
                         ;
@@ -2137,9 +2188,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_15);
+                    showData.append(fightForm, container_15);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_15);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_15);
 
 
                 } else if (logo.name === teamData.teams[16].name) {
@@ -2258,8 +2309,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_16 = h4;
+                        container_16.append(h4_16);
 
-                        showData.append(h4_16);
+                        showData.append(container_16);
 
                         fightForm.reset()
                         ;
@@ -2267,9 +2319,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_16);
+                    showData.append(fightForm, container_16);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_16);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_16);
 
 
                 } else if (logo.name === teamData.teams[17].name) {
@@ -2388,8 +2440,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_17 = h4;
+                        container_17.append(h4_17);
 
-                        showData.append(h4_17);
+                        showData.append(container_17);
 
                         fightForm.reset()
                         ;
@@ -2397,9 +2450,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_17);
+                    showData.append(fightForm, container_17);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_17);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_17);
 
 
                 } else if (logo.name === teamData.teams[18].name) {
@@ -2518,8 +2571,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_18 = h4;
+                        container_18.append(h4_18);
 
-                        showData.append(h4_18);
+                        showData.append(container_18);
 
                         fightForm.reset()
                         ;
@@ -2527,9 +2581,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_18);
+                    showData.append(fightForm, container_18);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_18);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_18);
 
 
                 } else if (logo.name === teamData.teams[19].name) {
@@ -2648,8 +2702,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_19 = h4;
-
-                        showData.append(h4_19);
+                        // const container = document.querySelector('#container');
+                        container_19.append(h4_19)
+                        showData.append(container_19);
 
                         fightForm.reset()
                         ;
@@ -2657,9 +2712,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_19);
+                    showData.append(fightForm, container_19);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_19);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_19);
 
 
 
@@ -2779,8 +2834,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_20 = h4;
+                        container_20.append(h4_20);
 
-                        showData.append(h4_20);
+                        showData.append(container_20);
 
                         fightForm.reset()
                         ;
@@ -2788,9 +2844,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_20);
+                    showData.append(fightForm, container_20);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_20);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_20);
 
 
                 } else if (logo.name === teamData.teams[21].name) {
@@ -2909,8 +2965,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_21 = h4;
+                        container_21.append(h4_21);
 
-                        showData.append(h4_21);
+                        showData.append(container_21);
 
                         fightForm.reset()
                         ;
@@ -2918,9 +2975,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_21);
+                    showData.append(fightForm, container_21);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_21);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_21);
 
 
                 } else if (logo.name === teamData.teams[22].name) {
@@ -3039,8 +3096,10 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_22 = h4;
+                        container_22.append(h4_22);
 
-                        showData.append(h4_22);
+
+                        showData.append(container_22);
 
                         fightForm.reset()
                         ;
@@ -3048,9 +3107,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_22);
+                    showData.append(fightForm, container_22);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_22);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_22);
 
 
                 } else if (logo.name === teamData.teams[23].name) {
@@ -3169,8 +3228,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_23 = h4;
+                        container_23.append(h4_23);
 
-                        showData.append(h4_23);
+                        showData.append(container_23);
 
                         fightForm.reset()
                         ;
@@ -3178,9 +3238,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_23);
+                    showData.append(fightForm, container_23);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_23);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_23);
 
 
                 } else if (logo.name === teamData.teams[24].name) {
@@ -3299,8 +3359,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_24 = h4;
+                        container_24.append(h4_24);
 
-                        showData.append(h4_24);
+                        showData.append(container_24);
 
                         fightForm.reset();
 
@@ -3308,9 +3369,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_24);
+                    showData.append(fightForm, container_24);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_1);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_24);
 
 
                 } else if (logo.name === teamData.teams[25].name) {
@@ -3429,8 +3490,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_25 = h4;
+                        container_25.append(h4_25);
 
-                        showData.append(h4_25);
+                        showData.append(container_25);
 
                         fightForm.reset()
                         ;
@@ -3438,9 +3500,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_25);
+                    showData.append(fightForm, container_25);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_25);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_25);
 
 
                 } else if (logo.name === teamData.teams[26].name) {
@@ -3559,8 +3621,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_26 = h4;
+                        container_26.append(h4_26);
 
-                        showData.append(h4_26);
+                        showData.append(container_26);
 
                         fightForm.reset()
                         ;
@@ -3568,9 +3631,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_26);
+                    showData.append(fightForm, container_26);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_26);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_26);
 
 
                 } else if (logo.name === teamData.teams[27].name) {
@@ -3689,8 +3752,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_27 = h4;
+                        container_27.append(h4_27);
 
-                        showData.append(h4_27);
+                        showData.append(container_27);
 
                         fightForm.reset()
                         ;
@@ -3698,9 +3762,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_27);
+                    showData.append(fightForm, container_27);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_27);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_27);
 
 
                 } else if (logo.name === teamData.teams[28].name) {
@@ -3819,8 +3883,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_28 = h4;
+                        container_28.append(h4_28);
 
-                        showData.append(h4_28);
+                        showData.append(container_28);
 
                         fightForm.reset()
                         ;
@@ -3828,9 +3893,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_28);
+                    showData.append(fightForm, container_28);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_28);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_28);
 
 
                 } else if (logo.name === teamData.teams[29].name) {
@@ -3949,8 +4014,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_29 = h4;
+                        container_29.append(h4_29);
 
-                        showData.append(h4_29);
+                        showData.append(container_29);
 
                         fightForm.reset()
                         ;
@@ -3958,9 +4024,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_29);
+                    showData.append(fightForm, container_29);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_29);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_29);
 
 
                 } else if (logo.name === teamData.teams[30].name) {
@@ -4079,8 +4145,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_30 = h4;
+                        container_30.append(h4_30);
 
-                        showData.append(h4_30);
+                        showData.append(container_30);
 
                         fightForm.reset()
                         ;
@@ -4088,9 +4155,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_30);
+                    showData.append(fightForm, container_30);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_30);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_30);
 
 
                 } else if (logo.name === teamData.teams[31].name) {
@@ -4209,8 +4276,9 @@ fetch('http://localhost:3000/logos')
                         
                         
                         h4_31 = h4;
+                        container_31.append(h4_31);
 
-                        showData.append(h4_31);
+                        showData.append(container_31);
 
                         fightForm.reset()
                         ;
@@ -4218,9 +4286,9 @@ fetch('http://localhost:3000/logos')
 
                     })
 
-                    showData.append(fightForm, h4_31);
+                    showData.append(fightForm, container_31);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, h4_31);
+                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_31);
 
 
                 }

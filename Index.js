@@ -1,12 +1,15 @@
-fetch('http://localhost:3000/logos')
-.then(resp => resp.json())
-.then(teamLogos => {
-    renderTeamLogos(teamLogos)
-})
-function renderTeamLogos(teamLogos) {
-    teamLogos.forEach((logo) => {
-        const logoImages = document.createElement('img')
-        logoImages.src = logo.image
-        document.querySelector('#Logosgohere').append(logoImages)
-    })
-}
+// Dark mode.
+const darkBtn = document.querySelector('#darkModeBtn')
+      darkBtn.addEventListener('click', e => {
+          document.body.classList.toggle('dark')
+        if (darkBtn.innerText === "DARK-MODE ON") {
+            darkBtn.innerText = "DARK-MODE OFF"
+        } else {
+            darkBtn.innerText = "DARK-MODE ON"
+        }
+
+       const p = document.createElement('P')
+       p.innerText = "this is the p"
+       testDiv.appendChild(p)
+
+      })

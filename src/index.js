@@ -248,8 +248,7 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
-                           
+
                             h4_0 = h4;
                             span_0 = span;
                             container_0.append(h4_0, span_0);
@@ -384,8 +383,7 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
-                            
+
                             h4_1 = h4;
                             span_1 = span;
 
@@ -518,9 +516,7 @@ fetch('http://localhost:3000/logos')
                         const h4 = document.createElement('h4');
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                        h4.textContent += `Description: ${tempFightInput}`;
-                        h4.style.marginBottom = "-.2%";
-                            
+                        h4.textContent += `Description: ${tempFightInput}`;                            
 
                         h4_2 = h4;
                         span_2 = span
@@ -655,7 +651,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_3 = h4;
                             span_3 = span
@@ -789,7 +784,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             span_4 = span;
                             h4_4 = h4;
@@ -923,7 +917,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             span_5 = span;
                             h4_5 = h4;
@@ -1057,7 +1050,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_6 = h4;
                             span_6 = span;
@@ -1191,7 +1183,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_7 = h4;
                             span_7 = span;
@@ -1325,7 +1316,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
                             
                             h4_8 = h4;
                             span_8 = span;
@@ -1459,7 +1449,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_9 = h4;
                             span_9 = span;
@@ -1593,7 +1582,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_10 = h4;
                             span_10 = span;
@@ -1727,7 +1715,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_11 = h4;
                             span_11 = span;
@@ -1862,7 +1849,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_12 = h4;
                             span_12 = span;
@@ -1996,7 +1982,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_13 = h4;
                             span_13 = span;
@@ -2130,7 +2115,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
                             
                             h4_14 = h4;
                             span_14 = span;
@@ -2264,7 +2248,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_15 = h4;
                             span_15 = span;
@@ -2398,7 +2381,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_16 = h4;
                             span_16 = span;
@@ -2532,7 +2514,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_17 = h4;
                             span_17 = span;
@@ -2666,7 +2647,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_18 = h4;
                             span_18 = span;
@@ -2800,7 +2780,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_19 = h4;
                             span_19 = span;
@@ -2934,7 +2913,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_20 = h4;
                             span_20 = span;
@@ -3068,7 +3046,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_21 = h4;
                             span_21 = span;
@@ -3202,7 +3179,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_22 = h4;
                             span_22 = span;
@@ -3336,7 +3312,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
                             
                             h4_23 = h4;
                             span_23 = span;
@@ -3470,7 +3445,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_24 = h4;
                             span_24 = span;
@@ -3604,7 +3578,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_25 = h4;
                             span_25 = span;
@@ -3738,7 +3711,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_26 = h4;
                             span_26 = span;
@@ -3872,7 +3844,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
                             
                             h4_27 = h4;
                             span_27 = span;
@@ -4006,7 +3977,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
                             
                             h4_28 = h4;
                             span_28 = span;
@@ -4140,7 +4110,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_29 = h4;
                             span_29 = span;
@@ -4275,7 +4244,6 @@ fetch('http://localhost:3000/logos')
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                             h4.textContent += `Description: ${tempFightInput}`;
-                            h4.style.marginBottom = "-.2%";
 
                             h4_30 = h4;
                             span_30 = span;
@@ -4413,7 +4381,6 @@ fetch('http://localhost:3000/logos')
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
                         h4.textContent += `Description: ${tempFightInput}`;
-                        h4.style.marginBottom = "-.2%";
 
                         h4_31 = h4;
                         span_31 = span;

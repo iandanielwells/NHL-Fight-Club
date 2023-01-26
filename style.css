@@ -50,8 +50,14 @@ color: white;
 
 h1 span {
   background-color: black;
+  text-align: center;
   border-radius: 30px;
   padding: 15px;
+}
+h1 button {
+  padding: 15px;
+  border-radius: 30px;
+  text-align: left;
 }
 
 #show-data {

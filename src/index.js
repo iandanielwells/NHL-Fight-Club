@@ -30,6 +30,38 @@ let h4_28 = document.createElement('h4');
 let h4_29 = document.createElement('h4');
 let h4_30 = document.createElement('h4');
 let h4_31 = document.createElement('h4');
+let span_0 = document.createElement('span');
+let span_1 = document.createElement('span');
+let span_2 = document.createElement('span');
+let span_3 = document.createElement('span');
+let span_4 = document.createElement('span');
+let span_5 = document.createElement('span');
+let span_6 = document.createElement('span');
+let span_7= document.createElement('span');
+let span_8 = document.createElement('span');
+let span_9 = document.createElement('span');
+let span_10 = document.createElement('span');
+let span_11 = document.createElement('span');
+let span_12 = document.createElement('span');
+let span_13 = document.createElement('span');
+let span_14 = document.createElement('span');
+let span_15 = document.createElement('span');
+let span_16 = document.createElement('span');
+let span_17= document.createElement('span');
+let span_18 = document.createElement('span');
+let span_19 = document.createElement('span');
+let span_20 = document.createElement('span');
+let span_21 = document.createElement('span');
+let span_22 = document.createElement('span');
+let span_23 = document.createElement('span');
+let span_24 = document.createElement('span');
+let span_25= document.createElement('span');
+let span_26 = document.createElement('span');
+let span_27 = document.createElement('span');
+let span_28 = document.createElement('span');
+let span_29 = document.createElement('span');
+let span_30 = document.createElement('span');
+let span_31 = document.createElement('span');
 const container_0 = document.querySelector('#container-0');
 const container_1 = document.querySelector('#container-1');
 const container_2 = document.querySelector('#container-2');
@@ -204,30 +236,24 @@ fetch('http://localhost:3000/logos')
                             const tempWinnerInput = document.querySelector('.fight-winner').value;
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
-
-                            console.log(temphighlightInput)
-
+                            
+                            const span = document.createElement('span');
                             const a = document.createElement('a');
-                            const p = document.createElement('p');
                             a.setAttribute('href', temphighlightInput);
-                            a.setAttribute('rel',' link');
+                            a.textContent = 'Highlight Video';
                             console.log(a);
-                            p.append(a);
-                            console.log(p);
-
-                            
-                            
-
+                            span.appendChild(a);
                             
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
-                            h4.innerHTML = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.innerHTML += a.href + `\r\n`;
-                            h4.innerHTML += `Description: ${tempFightInput}`;
-                             
-                            console.log(h4);
+                            h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+                           
                             h4_0 = h4;
-                            container_0.append(h4_0);
+                            span_0 = span;
+                            container_0.append(h4_0, span_0);
+                            
                             showData.append(container_0);
 
                             fightForm.reset();
@@ -346,14 +372,24 @@ fetch('http://localhost:3000/logos')
                             const tempWinnerInput = document.querySelector('.fight-winner').value;
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
-
+                            
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            console.log(a);
+                            span.appendChild(a);
+                            
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
                             
                             h4_1 = h4;
-                            container_1.append(h4_1);
+                            span_1 = span;
+
+                            container_1.append(h4_1, span_1);
                             showData.append(container_1);
 
                             fightForm.reset();
@@ -473,14 +509,23 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
                         
+                        const span = document.createElement('span');
+                        const a = document.createElement('a');
+                        a.setAttribute('href', temphighlightInput);
+                        a.textContent = 'Highlight Video';
+                        span.appendChild(a);
+                            
                         const h4 = document.createElement('h4');
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                        h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                        
+                        h4.textContent += `Description: ${tempFightInput}`;
+                        h4.style.marginBottom = "-.2%";
+                            
+
                         h4_2 = h4;
+                        span_2 = span
                         container_2.append(h4_2);
-                        showData.append(container_2);
+                        showData.append(container_2, span_2);
 
                         fightForm.reset();
                         fightForm.textContent = "";
@@ -600,15 +645,22 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
-                            h4_3 = h4;
-                            container_3.append(h4_3);
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
 
-                            showData.append(container_3);
+                            h4_3 = h4;
+                            span_3 = span
+                            container_3.append(h4_3);
+                            showData.append(container_3, span_3);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -727,14 +779,22 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
+                            span_4 = span;
                             h4_4 = h4;
                             container_4.append(h4_4);
-                            showData.append(container_4);
+                            showData.append(container_4, span_4);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -853,14 +913,22 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
+                            span_5 = span;
                             h4_5 = h4;
                             container_5.append(h4_5);
-                            showData.append(container_5);
+                            showData.append(container_5, span_5);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -979,14 +1047,22 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_6 = h4;
+                            span_6 = span;
                             container_6.append(h4_6);
-                            showData.append(container_6);
+                            showData.append(container_6, span_6);
 
                             fightForm.reset();                           
                             fightForm.textContent = "";
@@ -1105,13 +1181,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_7 = h4;
-                            container_7.append(h4_7);
+                            span_7 = span;
+                            container_7.append(h4_7, span_7);
                             showData.append(container_7);
 
                             fightForm.reset();
@@ -1231,13 +1315,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                                        
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+                            
                             h4_8 = h4;
-                            container_8.append(h4_8);
+                            span_8 = span;
+                            container_8.append(h4_8, span_8);
                             showData.append(container_8);
 
                             fightForm.reset();
@@ -1357,13 +1449,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_9 = h4;
-                            container_9.append(h4_9);
+                            span_9 = span;
+                            container_9.append(h4_9, span_9);
                             showData.append(container_9);
 
                             fightForm.reset();
@@ -1483,13 +1583,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_10 = h4;
-                            container_10.append(h4_10)
+                            span_10 = span;
+                            container_10.append(h4_10, span_10);
                             showData.append(container_10);
 
                             fightForm.reset();
@@ -1609,13 +1717,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_11 = h4;
-                            container_11.append(h4_11);
+                            span_11 = span;
+                            container_11.append(h4_11, span_11);
                             showData.append(container_11);
 
                             fightForm.reset();
@@ -1735,13 +1851,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_12 = h4;
-                            container_12.append(h4_12);
+                            span_12 = span;
+                            container_12.append(h4_12, span_12);
                             showData.append(container_12);
 
                             fightForm.reset();
@@ -1861,13 +1985,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_13 = h4;
-                            container_13.append(h4_13);
+                            span_13 = span;
+                            container_13.append(h4_13, span_13);
                             showData.append(container_13);
 
                             fightForm.reset();
@@ -1987,13 +2119,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                  
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+                            
                             h4_14 = h4;
-                            container_14.append(h4_14);
+                            span_14 = span;
+                            container_14.append(h4_14, span_14);
                             showData.append(container_14);
 
                             fightForm.reset();
@@ -2113,13 +2253,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_15 = h4;
-                            container_15.append(h4_15);
+                            span_15 = span;
+                            container_15.append(h4_15, span_15);
                             showData.append(container_15);
 
                             fightForm.reset();
@@ -2239,13 +2387,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_16 = h4;
-                            container_16.append(h4_16);
+                            span_16 = span;
+                            container_16.append(h4_16, span_16);
                             showData.append(container_16);
 
                             fightForm.reset();
@@ -2365,13 +2521,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_17 = h4;
-                            container_17.append(h4_17);
+                            span_17 = span;
+                            container_17.append(h4_17, span_17);
                             showData.append(container_17);
 
                             fightForm.reset();
@@ -2491,13 +2655,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_18 = h4;
-                            container_18.append(h4_18);
+                            span_18 = span;
+                            container_18.append(h4_18, span_18);
                             showData.append(container_18);
 
                             fightForm.reset();
@@ -2617,13 +2789,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                             
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_19 = h4;
-                            container_19.append(h4_19)
+                            span_19 = span;
+                            container_19.append(h4_19, span_19);
                             showData.append(container_19);
 
                             fightForm.reset();
@@ -2743,13 +2923,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_20 = h4;
-                            container_20.append(h4_20);
+                            span_20 = span;
+                            container_20.append(h4_20, span_20);
                             showData.append(container_20);
 
                             fightForm.reset();
@@ -2869,13 +3057,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                              
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_21 = h4;
-                            container_21.append(h4_21);
+                            span_21 = span;
+                            container_21.append(h4_21, span_21);
                             showData.append(container_21);
 
                             fightForm.reset();
@@ -2995,13 +3191,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                   
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_22 = h4;
-                            container_22.append(h4_22);
+                            span_22 = span;
+                            container_22.append(h4_22, span_22);
                             showData.append(container_22);
 
                             fightForm.reset();
@@ -3121,13 +3325,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
-                                          
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+                            
                             h4_23 = h4;
-                            container_23.append(h4_23);
+                            span_23 = span;
+                            container_23.append(h4_23, span_23);
                             showData.append(container_23);
 
                             fightForm.reset();
@@ -3247,13 +3459,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_24 = h4;
-                            container_24.append(h4_24);
+                            span_24 = span;
+                            container_24.append(h4_24, span_24);
                             showData.append(container_24);
 
                             fightForm.reset();
@@ -3373,13 +3593,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                        
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_25 = h4;
-                            container_25.append(h4_25);
+                            span_25 = span;
+                            container_25.append(h4_25, span_25);
                             showData.append(container_25);
 
                             fightForm.reset();
@@ -3499,13 +3727,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                                       
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_26 = h4;
-                            container_26.append(h4_26);
+                            span_26 = span;
+                            container_26.append(h4_26, span_26);
                             showData.append(container_26);
 
                             fightForm.reset();
@@ -3625,15 +3861,22 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
                             
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                               
-                            h4_27 = h4;
-                            container_27.append(h4_27);
-                            showData.append(container_27);
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
                             
+                            h4_27 = h4;
+                            span_27 = span;
+                            container_27.append(h4_27, span_27);
+                            showData.append(container_27);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -3752,13 +3995,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                  
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+                            
                             h4_28 = h4;
-                            container_29.append(h4_28);
+                            span_28 = span;
+                            container_29.append(h4_28, span_28);
                             showData.append(container_28);
 
                             fightForm.reset();
@@ -3878,13 +4129,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                                  
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_29 = h4;
-                            container_29.append(h4_29);
+                            span_29 = span;
+                            container_29.append(h4_29, span_29);
                             showData.append(container_29);
 
                             fightForm.reset();
@@ -3923,13 +4182,11 @@ fetch('http://localhost:3000/logos')
                         const fightForm = document.createElement('form');
                         fightForm.setAttribute('class', 'fight-form');
 
-                        
                         const fightDetails = document.createElement('submit');
                         
                         const fightInput = document.createElement('input');
                         fightInput.setAttribute('class', 'fight-input');
                         fightInput.setAttribute('placeholder', 'Description...');
-                        
                         
                         const fightWinner = document.createElement('submit');
 
@@ -4007,13 +4264,21 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            const span = document.createElement('span');
+                            const a = document.createElement('a');
+                            a.setAttribute('href', temphighlightInput);
+                            a.textContent = 'Highlight Video';
+                            span.appendChild(a);
+                                
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                            
+                            h4.textContent += `Description: ${tempFightInput}`;
+                            h4.style.marginBottom = "-.2%";
+
                             h4_30 = h4;
-                            container_30.append(h4_30);
+                            span_30 = span;
+                            container_30.append(h4_30, span_30);
                             showData.append(container_30);
 
                             fightForm.reset();
@@ -4135,21 +4400,23 @@ fetch('http://localhost:3000/logos')
                         const tempFightInput = document.querySelector('.fight-input').value;
                         const tempWinnerInput = document.querySelector('.fight-winner').value;
                         const tempRatings = document.querySelector('.rating').value;
-
                         const temphighlightInput = document.querySelector('.fight-url').value;
-                        const a = document.createElement('a');
-                        const p = document.createElement('p');
-                        a.setAttribute('href', temphighlightInput);
-                        a.innerText = temphighlightInput;
-                        p.append(a);
 
+                        const span = document.createElement('span');
+                        const a = document.createElement('a');
+                        a.setAttribute('href', temphighlightInput);
+                        a.textContent = 'Highlight Video';
+                        span.appendChild(a);
+                            
                         const h4 = document.createElement('h4');
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                        h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
-                        
+                        h4.textContent += `Description: ${tempFightInput}`;
+                        h4.style.marginBottom = "-.2%";
+
                         h4_31 = h4;
-                        container_31.append(h4_31);
+                        span_31 = span;
+                        container_31.append(h4_31, span_31);
                         showData.append(container_31);
 
                         fightForm.reset();

@@ -64,6 +64,7 @@ const container_30 = document.querySelector('#container-30');
 const container_31 = document.querySelector('#container-31');
 
 
+
 fetch('http://localhost:3000/logos')
 .then(resp => resp.json())
 .then(teamLogos => {
@@ -72,7 +73,6 @@ fetch('http://localhost:3000/logos')
         const img = document.createElement('img');
         img.src = logo.image;
         logosNav.append(img);
-        
         img.addEventListener('mouseover', () => {
             img.title = logo.name;
         })
@@ -207,8 +207,8 @@ fetch('http://localhost:3000/logos')
                         const ul = document.createElement('ul');
                         
                         const h4_original = document.createElement('h4');
-                        h4_original.setAttribute('style', 'white-space: pre;');
-                        h4_original.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n  Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4_original.setAttribute('class', 'fight-details-info');
+                        h4_original.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         
@@ -4312,4 +4312,3 @@ fetch('http://localhost:3000/logos')
             darkBtn.style.color = 'black';
         }
       })
-

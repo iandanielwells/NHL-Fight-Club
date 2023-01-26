@@ -207,9 +207,10 @@ fetch('http://localhost:3000/logos')
 
                             const a = document.createElement('a');
                             const link = document.createTextNode("Highlight Reel");
-                            a.append(link);
+                            a.appendChild(link);
                             a.title = "Highlight Reel";
-                            a.href = temphighlightInput
+                            a.href = temphighlightInput;
+                            
 
                             
                             const h4 = document.createElement('h4');

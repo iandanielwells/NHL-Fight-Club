@@ -72,8 +72,9 @@ h1 button {
   height: auto;
   float: inline-start;
   text-align: center;
+}
+#show-data {
   clear: right;
-  
 }
 
 #fight-form {
@@ -144,9 +145,7 @@ select {
 
 #twitter {
   float:right;
-  position:unset;
-  clear: right;
-  margin-block-start: -30rem;
+  position:relative;
   width: 25%;
   padding-right: .5rem;
   /* clear: right; */

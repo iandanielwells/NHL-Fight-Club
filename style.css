@@ -65,7 +65,7 @@ h1 span {
   height: auto;
   float: inline-start;
   text-align: center;
-  clear: right;
+  
 }
 
 #fight-form {
@@ -144,12 +144,11 @@ select {
 }
 
 #twitter {
-  float: right;
-  position: relative;
-  height: fit-content;
+  float:right;
+  position:relative;
+  height: 90%;
   width: 30%;
-  float: right;
   clear: right;
-
+  margin-right: 1rem;
 }
 

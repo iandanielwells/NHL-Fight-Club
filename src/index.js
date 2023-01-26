@@ -203,17 +203,14 @@ fetch('http://localhost:3000/logos')
                         const tempWinnerInput = document.querySelector('.fight-winner').value;
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
-
-                        const ul = document.createElement('ul');
                         
-                        const h4_original = document.createElement('h4');
-                        h4_original.setAttribute('style', 'white-space: pre;');
-                        h4_original.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n  Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
-                        
+                        const h4 = document.createElement('h4');
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
-                        
-                        h4_0 = h4_original;
+                        h4_0 = h4;
                         container_0.append(h4_0);
 
                         showData.append(container_0);
@@ -337,11 +334,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_1 = h4;
@@ -467,20 +463,18 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
                         
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
-                        
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         h4_2 = h4;
                         container_2.append(h4_2);
 
                         showData.append(container_2);
 
-                        fightForm.reset()
-                        ;
+                        fightForm.reset();
                         fightForm.textContent = "";
 
                     })
@@ -598,11 +592,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_3 = h4;
@@ -729,11 +722,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_4 = h4;
@@ -860,11 +852,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_5 = h4;
@@ -991,11 +982,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_6 = h4;
@@ -1122,11 +1112,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_7 = h4;
@@ -1253,11 +1242,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_8 = h4;
@@ -1384,11 +1372,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_9 = h4;
@@ -1515,11 +1502,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_10 = h4;
@@ -1646,11 +1632,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_11 = h4;
@@ -1777,11 +1762,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_12 = h4;
@@ -1908,11 +1892,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_13 = h4;
@@ -2039,11 +2022,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_14 = h4;
@@ -2170,11 +2152,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_15 = h4;
@@ -2301,11 +2282,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_16 = h4;
@@ -2432,11 +2412,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_17 = h4;
@@ -2563,11 +2542,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_18 = h4;
@@ -2694,11 +2672,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_19 = h4;
@@ -2826,11 +2803,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_20 = h4;
@@ -2957,11 +2933,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_21 = h4;
@@ -3088,11 +3063,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_22 = h4;
@@ -3220,11 +3194,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_23 = h4;
@@ -3351,11 +3324,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_24 = h4;
@@ -3482,11 +3454,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_25 = h4;
@@ -3613,11 +3584,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_26 = h4;
@@ -3743,12 +3713,11 @@ fetch('http://localhost:3000/logos')
                         const tempWinnerInput = document.querySelector('.fight-winner').value;
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
-
-                        const ul = document.createElement('ul');
                         
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_27 = h4;
@@ -3875,11 +3844,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_28 = h4;
@@ -4006,11 +3974,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_29 = h4;
@@ -4137,11 +4104,10 @@ fetch('http://localhost:3000/logos')
                         const temphighlightInput = document.querySelector('.fight-url').value;
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
                         
                         
                         h4_30 = h4;
@@ -4265,14 +4231,19 @@ fetch('http://localhost:3000/logos')
 
                         const tempFightInput = document.querySelector('.fight-input').value;
                         const tempWinnerInput = document.querySelector('.fight-winner').value;
+                        
                         const temphighlightInput = document.querySelector('.fight-url').value;
+                        const a = document.createElement('a');
+                        a.setAttribute('href', temphighlightInput);
+                        a.innerText = temphighlightInput;
+
                         const tempRatings = document.querySelector('.rating').value;
 
-                        const ul = document.createElement('ul');
-                        
+
                         const h4 = document.createElement('h4');
-                        h4.setAttribute('class', 'fight-details-info');
-                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10   Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.setAttribute('style', 'white-space: pre;');
+                        h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                        h4.textContent += `Highlights: (${a})     Description: ${tempFightInput}`;
                         
                         
                         h4_31 = h4;
@@ -4312,4 +4283,13 @@ fetch('http://localhost:3000/logos')
             darkBtn.style.color = 'black';
         }
       })
+
+/*
+To do:
+      -make the twitter feed in-line with the details body and image grid
+      -patch the fight increments
+      -create json fightDetails array and associate with the input and fetching for persistence
+      -potentially switch to each individual team's twitter feed when clicked on, elements are created in html and there must be a way to hide elements and then show the within the if else statement
+
+*/
 

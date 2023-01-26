@@ -1762,6 +1762,7 @@ fetch('http://localhost:3000/logos')
                     
                     const fightIncrementer = document.createElement('button');
                     fightIncrementer.textContent = 'Add Fight';
+                    fightIncrementer.style.borderRadius = "10px";
                     fightIncrementer.addEventListener("click", () => {
                     
                         fightNumber.textContent = `Fights: ${logo.fights+=1}`;

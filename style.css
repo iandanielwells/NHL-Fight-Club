@@ -52,6 +52,13 @@ h1 button {
     margin-top: 0.5rem;
     cursor: pointer;
   }
+
+  #Logosgohere img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transform: rotate(8deg);
+    transition: 0.3s ease-in-out;
+  }
   
   #darkModeBtn {
     margin-left: 4rem;

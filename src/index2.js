@@ -120,17 +120,6 @@ fetch('http://localhost:3000/logos')
                     
                         fightNumber.textContent = `Fights: ${logo.fights+=1}`;
                         
-                        fetch(`http://localhost:3000/logos/1`, {
-                            method: 'PATCH',
-                            body: JSON.stringify({
-                                fights: 1
-                            }),
-                            headers: {
-                                "Content-type": "application/json; charset=UTF-8"
-                            }
-                        })
-                        .then(response => response.json())
-                        .then(json => console.log(json))
                         const fightForm = document.createElement('form');
                         fightForm.setAttribute('class', 'fight-form');
 

@@ -72,6 +72,7 @@ h1 button {
   height: auto;
   float: inline-start;
   text-align: center;
+  clear: right;
   
 }
 
@@ -143,12 +144,13 @@ select {
 
 #twitter {
   float:right;
-  position:relative;
-  height: 40%;
+  position:unset;
+  clear: right;
+  margin-block-start: -30rem;
   width: 25%;
+  padding-right: .5rem;
   /* clear: right; */
-  margin-right: 1rem;
-  margin-top: -15%;
+  
 }
 
 /* believe I need to clear out the right side of that details body and then hopefully the div should just place next to it. 

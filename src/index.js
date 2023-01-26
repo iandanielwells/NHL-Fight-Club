@@ -4070,7 +4070,8 @@ To do:
       -make the twitter feed in-line with the details body and image grid
       -patch the fight increments
       -create json fightDetails array and associate with the input and fetching for persistence
-      -potentially switch to each individual team's twitter feed when clicked on, elements are created in html and there must be a way to hide elements and then show the within the if else statement
+      -potentially switch to each individual team's twitter feed when clicked on, elements are created in html and 
+       there must be a way to hide elements and then show the within the if else statement
 
 */
 

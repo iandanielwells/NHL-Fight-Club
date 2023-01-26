@@ -120,17 +120,6 @@ fetch('http://localhost:3000/logos')
                     
                         fightNumber.textContent = `Fights: ${logo.fights+=1}`;
                         
-                        fetch(`http://localhost:3000/logos/1`, {
-                            method: 'PATCH',
-                            body: JSON.stringify({
-                                fights: 1
-                            }),
-                            headers: {
-                                "Content-type": "application/json; charset=UTF-8"
-                            }
-                        })
-                        .then(response => response.json())
-                        .then(json => console.log(json))
                         const fightForm = document.createElement('form');
                         fightForm.setAttribute('class', 'fight-form');
 
@@ -216,18 +205,27 @@ fetch('http://localhost:3000/logos')
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
 
+                            console.log(temphighlightInput)
+
                             const a = document.createElement('a');
-                            const link = document.createTextNode("Highlight Reel");
-                            a.append(link);
-                            a.title = "Highlight Reel";
-                            a.href = temphighlightInput
+                            const p = document.createElement('p');
+                            a.setAttribute('href', temphighlightInput);
+                            a.setAttribute('rel',' link');
+                            console.log(a);
+                            p.append(a);
+                            console.log(p);
+
+                            
+                            
 
                             
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
-                            h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: ${a}     Description: ${tempFightInput}`;
-                                    
+                            h4.innerHTML = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                            h4.innerHTML += a.href + `\r\n`;
+                            h4.innerHTML += `Description: ${tempFightInput}`;
+                             
+                            console.log(h4);
                             h4_0 = h4;
                             container_0.append(h4_0);
                             showData.append(container_0);
@@ -3682,7 +3680,7 @@ fetch('http://localhost:3000/logos')
 
                         const fightWinnerInput = document.createElement('input');
                         fightWinnerInput.setAttribute('class', 'fight-winner');
-                        fightWinnerInput.setAttribute('placeholder', 'Enter winner here...');
+                        fightWinnerInput.setAttribute('placeholder', 'Winner...');
                         fightWinnerInput.textContent = 'Enter highlights';
 
                         const fightHighlightUrl = document.createElement('submit');
@@ -3808,7 +3806,7 @@ fetch('http://localhost:3000/logos')
 
                         const fightWinnerInput = document.createElement('input');
                         fightWinnerInput.setAttribute('class', 'fight-winner');
-                        fightWinnerInput.setAttribute('placeholder', 'Enter winner here...');
+                        fightWinnerInput.setAttribute('placeholder', 'Winner...');
                         fightWinnerInput.textContent = 'Enter highlights';
 
                         const fightHighlightUrl = document.createElement('submit');
@@ -3937,7 +3935,7 @@ fetch('http://localhost:3000/logos')
 
                         const fightWinnerInput = document.createElement('input');
                         fightWinnerInput.setAttribute('class', 'fight-winner');
-                        fightWinnerInput.setAttribute('placeholder', 'Enter winner here...');
+                        fightWinnerInput.setAttribute('placeholder', 'Winner...');
                         fightWinnerInput.textContent = 'Enter highlights';
 
                         const fightHighlightUrl = document.createElement('submit');
@@ -4065,7 +4063,7 @@ fetch('http://localhost:3000/logos')
 
                     const fightWinnerInput = document.createElement('input');
                     fightWinnerInput.setAttribute('class', 'fight-winner');
-                    fightWinnerInput.setAttribute('placeholder', 'WinnerS...');
+                    fightWinnerInput.setAttribute('placeholder', 'Winner...');
                     fightWinnerInput.textContent = 'Enter highlights';
 
                     const fightHighlightUrl = document.createElement('submit');

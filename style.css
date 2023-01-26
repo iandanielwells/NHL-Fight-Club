@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  max-width: 20%;
+  max-width: 25%;
   float: left;
   clear: left;
 }
@@ -40,7 +40,7 @@ body.dark {
   color: white;
 }
 
-h1 {
+ h1 {
 text-align: center;
 font-family: "Arial Black", sans-serif;
 font-size: 4.5em;
@@ -58,7 +58,8 @@ h1 button {
   padding: 15px;
   border-radius: 30px;
   text-align: left;
-}
+  margin-bottom: 5rem;
+} 
 
 #show-data {
   border: solid;
@@ -67,7 +68,7 @@ h1 button {
   margin: auto;
   position: relative;
   align-items: center;
-  width: 35%;
+  width: 40%;
   height: auto;
   float: inline-start;
   text-align: center;
@@ -118,15 +119,6 @@ select {
   padding: 10px;
 }
 
-/* .teams,
-.winner,
-#rating-display {
-  position: relative;
-  float: right;
-  clear: right;
-  padding: 0.25rem 5rem 0.25rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-} */
 
 .fight-winner {
   border-radius: 10px;
@@ -152,9 +144,13 @@ select {
 #twitter {
   float:right;
   position:relative;
-  height: 90%;
-  width: 30%;
-  clear: right;
+  height: 40%;
+  width: 25%;
+  /* clear: right; */
   margin-right: 1rem;
+  margin-top: -15%;
 }
 
+/* believe I need to clear out the right side of that details body and then hopefully the div should just place next to it. 
+    Having trouble because it adjust according to main body (eg. when image clicked on and details display, the twitter page lowers.
+*/

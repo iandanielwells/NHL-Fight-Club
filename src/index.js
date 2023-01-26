@@ -93,6 +93,7 @@ fetch('http://localhost:3000/logos')
             fetch('https://statsapi.web.nhl.com/api/v1/teams?expand=team.stats')
             .then(response => response.json())
             .then(teamData => { 
+                console.log(teamData);
 
                 if (logo.name === teamData.teams[0].name) {
                     const h3 = document.createElement('h3');
@@ -100,6 +101,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h2 = document.createElement('h2');
                     h2.textContent = `Record: ${teamData.teams[0].teamStats[0].splits[0].stat.wins}-${teamData.teams[0].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[0].teamStats[0].splits[1].stat.pts} (${teamData.teams[0].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[0].conference.name} (${teamData.teams[0].division.name})`;
@@ -200,11 +204,18 @@ fetch('http://localhost:3000/logos')
                             const tempWinnerInput = document.querySelector('.fight-winner').value;
                             const temphighlightInput = document.querySelector('.fight-url').value;
                             const tempRatings = document.querySelector('.rating').value;
+
+                            const a = document.createElement('a');
+                            const link = document.createTextNode("Highlight Reel");
+                            a.append(link);
+                            a.title = "Highlight Reel";
+                            a.href = temphighlightInput
+
                             
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${a}     Description: ${tempFightInput}`;
                                     
                             h4_0 = h4;
                             container_0.append(h4_0);
@@ -215,7 +226,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_0);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_0);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_0);
 
                 } else if (logo.name === teamData.teams[1].name) {
                     const h3 = document.createElement('h3');
@@ -227,9 +238,12 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[1].conference.name} (${teamData.teams[1].division.name})`;
                     
-                    const h3_3 = document.createElement('h3');
-                    h3_3.textContent = 'Fight History - '
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[1].teamStats[0].splits[1].stat.pts} (${teamData.teams[1].teamStats[0].splits[0].stat.pts} points)`;
                     
+                    const h3_3 = document.createElement('h3');
+                    h3_3.textContent = 'Fight History - ';
+
                     const fightNumber = document.createElement('h3');
                     fightNumber.textContent = `Fights: ${logo.fights}`;
                     
@@ -327,7 +341,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_1 = h4;
                             container_1.append(h4_1);
@@ -338,7 +352,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_1);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_1);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_1);
 
                 } else if (logo.name === teamData.teams[2].name) {
                     const h3 = document.createElement('h3');
@@ -349,6 +363,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[2].conference.name} (${teamData.teams[2].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[2].teamStats[0].splits[1].stat.pts} (${teamData.teams[2].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -450,7 +467,7 @@ fetch('http://localhost:3000/logos')
                         const h4 = document.createElement('h4');
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                        h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                        h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                         
                         h4_2 = h4;
                         container_2.append(h4_2);
@@ -461,7 +478,7 @@ fetch('http://localhost:3000/logos')
                     })
                     showData.append(fightForm, container_2);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_2);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_2);
 
                 } else if (logo.name === teamData.teams[3].name) {
                     const h3 = document.createElement('h3');
@@ -472,6 +489,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[3].conference.name} (${teamData.teams[3].division.name})`;
+
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[3].teamStats[0].splits[1].stat.pts} (${teamData.teams[3].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -574,7 +594,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;   
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_3 = h4;
                             container_3.append(h4_3);
@@ -586,7 +606,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_3);
                     })
-                    showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_3);
+                    showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_3);
 
                 } else if (logo.name === teamData.teams[4].name) {
                     const h3 = document.createElement('h3');
@@ -597,6 +617,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[4].conference.name} (${teamData.teams[4].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[4].teamStats[0].splits[1].stat.pts} (${teamData.teams[4].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -698,7 +721,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_4 = h4;
                             container_4.append(h4_4);
@@ -709,7 +732,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_4);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_4);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_4);
 
                 } else if (logo.name === teamData.teams[5].name) {
                     const h3 = document.createElement('h3');
@@ -720,6 +743,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[5].conference.name} (${teamData.teams[5].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[5].teamStats[0].splits[1].stat.pts} (${teamData.teams[5].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -821,7 +847,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_5 = h4;
                             container_5.append(h4_5);
@@ -832,7 +858,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_5);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_5);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_5);
 
                 } else if (logo.name === teamData.teams[6].name) {
                     const h3 = document.createElement('h3');
@@ -844,8 +870,11 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[6].conference.name} (${teamData.teams[6].division.name})`;
                     
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[6].teamStats[0].splits[1].stat.pts} (${teamData.teams[6].teamStats[0].splits[0].stat.pts} points)`;
+                    
                     const h3_3 = document.createElement('h3');
-                    h3_3.textContent = 'Fight History - '
+                    h3_3.textContent = 'Fight History: '
                     
                     const fightNumber = document.createElement('h3');
                     fightNumber.textContent = `Fights: ${logo.fights}`;
@@ -944,7 +973,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_6 = h4;
                             container_6.append(h4_6);
@@ -955,7 +984,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_6);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_6);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_6);
 
                 } else if (logo.name === teamData.teams[7].name) {
                     const h3 = document.createElement('h3');
@@ -966,6 +995,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[7].conference.name} (${teamData.teams[7].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[7].teamStats[0].splits[1].stat.pts} (${teamData.teams[7].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1067,7 +1099,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;   
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_7 = h4;
                             container_7.append(h4_7);
@@ -1078,7 +1110,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_7);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_7);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_7);
 
                 } else if (logo.name === teamData.teams[8].name) {
                     const h3 = document.createElement('h3');
@@ -1089,6 +1121,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[8].conference.name} (${teamData.teams[8].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[8].teamStats[0].splits[1].stat.pts} (${teamData.teams[8].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1190,7 +1225,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                                         
                             h4_8 = h4;
                             container_8.append(h4_8);
@@ -1201,7 +1236,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_8);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_8);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_8);
 
                 } else if (logo.name === teamData.teams[9].name) {
                     const h3 = document.createElement('h3');
@@ -1212,6 +1247,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[9].conference.name} (${teamData.teams[9].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[9].teamStats[0].splits[1].stat.pts} (${teamData.teams[9].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1313,7 +1351,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_9 = h4;
                             container_9.append(h4_9);
@@ -1324,7 +1362,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_9);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_9);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_9);
 
                 } else if (logo.name === teamData.teams[10].name) {
                     const h3 = document.createElement('h3');
@@ -1335,6 +1373,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[10].conference.name} (${teamData.teams[10].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[10].teamStats[0].splits[1].stat.pts} (${teamData.teams[10].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1436,7 +1477,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_10 = h4;
                             container_10.append(h4_10)
@@ -1447,7 +1488,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_10);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_10);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_10);
 
                 } else if (logo.name === teamData.teams[11].name) {
                     const h3 = document.createElement('h3');
@@ -1458,6 +1499,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[11].conference.name} (${teamData.teams[11].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[11].teamStats[0].splits[1].stat.pts} (${teamData.teams[11].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1559,7 +1603,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_11 = h4;
                             container_11.append(h4_11);
@@ -1570,7 +1614,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_11);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_11);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_11);
 
                 } else if (logo.name === teamData.teams[12].name) {
                     const h3 = document.createElement('h3');
@@ -1581,6 +1625,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[12].conference.name} (${teamData.teams[12].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[12].teamStats[0].splits[1].stat.pts} (${teamData.teams[12].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1682,7 +1729,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_12 = h4;
                             container_12.append(h4_12);
@@ -1693,7 +1740,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_12);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_12);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_12);
 
                 } else if (logo.name === teamData.teams[13].name) {
                     const h3 = document.createElement('h3');
@@ -1704,6 +1751,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[13].conference.name} (${teamData.teams[13].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[13].teamStats[0].splits[1].stat.pts} (${teamData.teams[13].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1805,7 +1855,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_13 = h4;
                             container_13.append(h4_13);
@@ -1816,7 +1866,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_13);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_13);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_13);
 
                 } else if (logo.name === teamData.teams[14].name) {
                     const h3 = document.createElement('h3');
@@ -1827,6 +1877,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[14].conference.name} (${teamData.teams[14].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[14].teamStats[0].splits[1].stat.pts} (${teamData.teams[14].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -1928,7 +1981,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                   
                             h4_14 = h4;
                             container_14.append(h4_14);
@@ -1939,7 +1992,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_14);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_14);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_14);
 
                 } else if (logo.name === teamData.teams[15].name) {
                     const h3 = document.createElement('h3');
@@ -1950,6 +2003,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[15].conference.name} (${teamData.teams[15].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[15].teamStats[0].splits[1].stat.pts} (${teamData.teams[15].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -2051,7 +2107,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_15 = h4;
                             container_15.append(h4_15);
@@ -2062,7 +2118,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_15);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_15);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_15);
 
                 } else if (logo.name === teamData.teams[16].name) {
                     const h3 = document.createElement('h3');
@@ -2073,6 +2129,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[16].conference.name} (${teamData.teams[16].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[16].teamStats[0].splits[1].stat.pts} (${teamData.teams[16].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -2174,7 +2233,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_16 = h4;
                             container_16.append(h4_16);
@@ -2185,7 +2244,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_16);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_16);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_16);
 
                 } else if (logo.name === teamData.teams[17].name) {
                     const h3 = document.createElement('h3');
@@ -2196,6 +2255,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[17].conference.name} (${teamData.teams[17].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[17].teamStats[0].splits[1].stat.pts} (${teamData.teams[17].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -2297,7 +2359,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_17 = h4;
                             container_17.append(h4_17);
@@ -2308,7 +2370,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_17);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_17);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_17);
 
                 } else if (logo.name === teamData.teams[18].name) {
                     const h3 = document.createElement('h3');
@@ -2320,6 +2382,9 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[18].conference.name} (${teamData.teams[18].division.name})`;
                     
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[18].teamStats[0].splits[1].stat.pts} (${teamData.teams[18].teamStats[0].splits[0].stat.pts} points)`;
+                    
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
                     
@@ -2420,7 +2485,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_18 = h4;
                             container_18.append(h4_18);
@@ -2431,7 +2496,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_18);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_18);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_18);
 
                 } else if (logo.name === teamData.teams[19].name) {
                     const h3 = document.createElement('h3');
@@ -2443,6 +2508,9 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[19].conference.name} (${teamData.teams[19].division.name})`;
                     
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[19].teamStats[0].splits[1].stat.pts} (${teamData.teams[19].teamStats[0].splits[0].stat.pts} points)`;
+                    
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
                     
@@ -2543,7 +2611,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                              
                             h4_19 = h4;
                             container_19.append(h4_19)
@@ -2554,7 +2622,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_19);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_19);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_19);
 
                 } else if (logo.name === teamData.teams[20].name) {
                     const h3 = document.createElement('h3');
@@ -2566,6 +2634,9 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[20].conference.name} (${teamData.teams[20].division.name})`;
                     
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[20].teamStats[0].splits[1].stat.pts} (${teamData.teams[20].teamStats[0].splits[0].stat.pts} points)`;
+                    
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
                     
@@ -2666,7 +2737,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_20 = h4;
                             container_20.append(h4_20);
@@ -2677,7 +2748,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_20);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_20);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_20);
 
                 } else if (logo.name === teamData.teams[21].name) {
                     const h3 = document.createElement('h3');
@@ -2689,6 +2760,9 @@ fetch('http://localhost:3000/logos')
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[21].conference.name} (${teamData.teams[21].division.name})`;
                     
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[21].teamStats[0].splits[1].stat.pts} (${teamData.teams[21].teamStats[0].splits[0].stat.pts} points)`;
+                    
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
                     
@@ -2789,7 +2863,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                               
                             h4_21 = h4;
                             container_21.append(h4_21);
@@ -2800,7 +2874,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_21);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_21);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_21);
 
                 } else if (logo.name === teamData.teams[22].name) {
                     const h3 = document.createElement('h3');
@@ -2811,6 +2885,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[22].conference.name} (${teamData.teams[22].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[22].teamStats[0].splits[1].stat.pts} (${teamData.teams[22].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -2912,7 +2989,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                    
                             h4_22 = h4;
                             container_22.append(h4_22);
@@ -2923,7 +3000,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_22);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_22);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_22);
 
                 } else if (logo.name === teamData.teams[23].name) {
                     const h3 = document.createElement('h3');
@@ -2934,6 +3011,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[23].conference.name} (${teamData.teams[23].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[23].teamStats[0].splits[1].stat.pts} (${teamData.teams[23].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3046,7 +3126,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_23);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_23);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_23);
 
                 } else if (logo.name === teamData.teams[24].name) {
                     const h3 = document.createElement('h3');
@@ -3057,6 +3137,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[24].conference.name} (${teamData.teams[24].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[24].teamStats[0].splits[1].stat.pts} (${teamData.teams[24].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3158,7 +3241,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_24 = h4;
                             container_24.append(h4_24);
@@ -3169,7 +3252,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_24);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_24);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_24);
 
                 } else if (logo.name === teamData.teams[25].name) {
                     const h3 = document.createElement('h3');
@@ -3180,6 +3263,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[25].conference.name} (${teamData.teams[25].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[25].teamStats[0].splits[1].stat.pts} (${teamData.teams[25].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3281,7 +3367,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                         
                             h4_25 = h4;
                             container_25.append(h4_25);
@@ -3292,7 +3378,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_25);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_25);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_25);
 
                 } else if (logo.name === teamData.teams[26].name) {
                     const h3 = document.createElement('h3');
@@ -3303,6 +3389,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[26].conference.name} (${teamData.teams[26].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[26].teamStats[0].splits[1].stat.pts} (${teamData.teams[26].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3404,7 +3493,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                                        
                             h4_26 = h4;
                             container_26.append(h4_26);
@@ -3415,7 +3504,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_26);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_26);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_26);
 
                 } else if (logo.name === teamData.teams[27].name) {
                     const h3 = document.createElement('h3');
@@ -3426,6 +3515,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[27].conference.name} (${teamData.teams[27].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[27].teamStats[0].splits[1].stat.pts} (${teamData.teams[27].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3527,151 +3619,32 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                
                             h4_27 = h4;
                             container_27.append(h4_27);
                             showData.append(container_27);
+                            
 
                             fightForm.reset();
                             fightForm.textContent = "";
                         })
                         showData.append(fightForm, container_27);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_27);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_27);
 
                 } else if (logo.name === teamData.teams[28].name) {
                     const h3 = document.createElement('h3');
                     h3.textContent = `${teamData.teams[28].venue.name} (${teamData.teams[28].venue.city})`;
                     
                     const h2 = document.createElement('h2');
-                    h2.textContent = `Record: ${teamData.teams[28].teamStats[0].splits[0].stat.wins}-${teamData.teams[0].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`
+                    h2.textContent = `Record: ${teamData.teams[28].teamStats[0].splits[0].stat.wins}-${teamData.teams[28].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[28].conference.name} (${teamData.teams[28].division.name})`;
                     
-                    const h3_3 = document.createElement('h3');
-                    h3_3.textContent = 'Fight History - '
-                    
-                    const fightNumber = document.createElement('h3');
-                    fightNumber.textContent = `Fights: ${logo.fights}`;
-                    
-                    const fightIncrementer = document.createElement('button');
-                    fightIncrementer.textContent = 'Add Fight';
-                    fightIncrementer.addEventListener("click", () => {
-                    
-                        fightNumber.textContent = `Fights: ${logo.fights+=1}`;
-                        
-                        const fightForm = document.createElement('form');
-                        fightForm.setAttribute('class', 'fight-form');
-              
-                        const fightDetails = document.createElement('submit');
-                        
-                        const fightInput = document.createElement('input');
-                        fightInput.setAttribute('class', 'fight-input');
-                        fightInput.setAttribute('placeholder', 'Description...');
-                                  
-                        const fightWinner = document.createElement('submit');
-
-                        const fightWinnerInput = document.createElement('input');
-                        fightWinnerInput.setAttribute('class', 'fight-winner');
-                        fightWinnerInput.setAttribute('placeholder', 'Winner...');
-                        fightWinnerInput.textContent = 'Enter highlights';
-
-                        const fightHighlightUrl = document.createElement('submit');
-
-                        const fightHighlightUrlInput = document.createElement('input');
-                        fightHighlightUrlInput.setAttribute('class', 'fight-url');
-                        fightHighlightUrlInput.setAttribute('placeholder', 'Video link...');
-
-                        const fightsubmitBtn = document.createElement('input');
-                        fightsubmitBtn.setAttribute('type', 'submit');
-                        fightsubmitBtn.textContent = 'Submit Fight Details';
-
-                        const elementLabel = document.createElement('h5');
-                        elementLabel.textContent = "Rate this fight";
-                        const selectElement = document.createElement('select');
-                        selectElement.append(elementLabel);
-                        selectElement.setAttribute('name', '1-10');
-                        selectElement.setAttribute('class', 'rating')
-
-                        const option1 = document.createElement('option');
-                        option1.setAttribute('value', '1');
-                        option1.textContent = '1';
-
-                        const option2 = document.createElement('option');
-                        option2.setAttribute('value', '2');
-                        option2.textContent = '2';
-
-                        const option3 = document.createElement('option');
-                        option3.setAttribute('value', '3');
-                        option3.textContent = '3';
-
-                        const option4 = document.createElement('option');
-                        option4.setAttribute('value', '4');
-                        option4.textContent = '4';
-
-                        const option5 = document.createElement('option');
-                        option5.setAttribute('value', '5');
-                        option5.textContent = '5';
-
-                        const option6 = document.createElement('option');
-                        option6.setAttribute('value', '6');
-                        option6.textContent = '6';
-
-                        const option7 = document.createElement('option');
-                        option7.setAttribute('value', '7');
-                        option7.textContent = '7';
-
-                        const option8 = document.createElement('option');
-                        option8.setAttribute('value', '8');
-                        option8.textContent = '8';
-
-                        const option9 = document.createElement('option');
-                        option9.setAttribute('value', '9');
-                        option9.textContent = '9';
-
-                        const option10 = document.createElement('option');
-                        option10.setAttribute('value', '10');
-                        option10.textContent = '10';
-
-                        selectElement.append(option1, option2, option3, option4, option5, option6, option7, option8, option9, option10);
-
-                        fightForm.append(fightDetails, fightInput, fightWinner, fightWinnerInput, fightHighlightUrl, fightHighlightUrlInput, selectElement, fightsubmitBtn);
-                        
-                        fightForm.addEventListener('submit', (event) => {
-                            event.preventDefault();
-
-                            const tempFightInput = document.querySelector('.fight-input').value;
-                            const tempWinnerInput = document.querySelector('.fight-winner').value;
-                            const temphighlightInput = document.querySelector('.fight-url').value;
-                            const tempRatings = document.querySelector('.rating').value;
-
-                            const h4 = document.createElement('h4');
-                            h4.setAttribute('style', 'white-space: pre;');
-                            h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
-                             
-                            h4_28 = h4;
-                            container_28.append(h4_28);
-                            showData.append(container_28);
-
-                            fightForm.reset();
-                            fightForm.textContent = "";
-                        })
-                        showData.append(fightForm, container_28);
-                    })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_28);
-
-                } else if (logo.name === teamData.teams[29].name) {
-                    const h3 = document.createElement('h3');
-                    h3.textContent = `${teamData.teams[29].venue.name} (${teamData.teams[29].venue.city})`;
-                    
-                    const h2 = document.createElement('h2');
-                    h2.textContent = `Record: ${teamData.teams[29].teamStats[0].splits[0].stat.wins}-${teamData.teams[0].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`
-                    
-                    const h3_2 = document.createElement('h3');
-                    h3_2.textContent = `${teamData.teams[29].conference.name} (${teamData.teams[29].division.name})`;
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[28].teamStats[0].splits[1].stat.pts} (${teamData.teams[28].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3773,7 +3746,133 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
+                                  
+                            h4_28 = h4;
+                            container_29.append(h4_28);
+                            showData.append(container_28);
+
+                            fightForm.reset();
+                            fightForm.textContent = "";
+                        })
+                        showData.append(fightForm, container_28);
+                    })
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_28);
+
+                } else if (logo.name === teamData.teams[29].name) {
+                    const h3 = document.createElement('h3');
+                    h3.textContent = `${teamData.teams[29].venue.name} (${teamData.teams[29].venue.city})`;
+                    
+                    const h2 = document.createElement('h2');
+                    h2.textContent = `Record: ${teamData.teams[29].teamStats[0].splits[0].stat.wins}-${teamData.teams[0].teamStats[0].splits[0].stat.losses}-${teamData.teams[0].teamStats[0].splits[0].stat.ot}`
+                    
+                    const h3_2 = document.createElement('h3');
+                    h3_2.textContent = `${teamData.teams[29].conference.name} (${teamData.teams[29].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[29].teamStats[0].splits[1].stat.pts} (${teamData.teams[29].teamStats[0].splits[0].stat.pts} points)`;
+                    
+                    const h3_3 = document.createElement('h3');
+                    h3_3.textContent = 'Fight History - '
+                    
+                    const fightNumber = document.createElement('h3');
+                    fightNumber.textContent = `Fights: ${logo.fights}`;
+                    
+                    const fightIncrementer = document.createElement('button');
+                    fightIncrementer.textContent = 'Add Fight';
+                    fightIncrementer.addEventListener("click", () => {
+                    
+                        fightNumber.textContent = `Fights: ${logo.fights+=1}`;
+                        
+                        const fightForm = document.createElement('form');
+                        fightForm.setAttribute('class', 'fight-form');
+        
+                        const fightDetails = document.createElement('submit');
+                        
+                        const fightInput = document.createElement('input');
+                        fightInput.setAttribute('class', 'fight-input');
+                        fightInput.setAttribute('placeholder', 'Description...');
+                                 
+                        const fightWinner = document.createElement('submit');
+
+                        const fightWinnerInput = document.createElement('input');
+                        fightWinnerInput.setAttribute('class', 'fight-winner');
+                        fightWinnerInput.setAttribute('placeholder', 'Enter winner here...');
+                        fightWinnerInput.textContent = 'Enter highlights';
+
+                        const fightHighlightUrl = document.createElement('submit');
+
+                        const fightHighlightUrlInput = document.createElement('input');
+                        fightHighlightUrlInput.setAttribute('class', 'fight-url');
+                        fightHighlightUrlInput.setAttribute('placeholder', 'Video link...');
+
+                        const fightsubmitBtn = document.createElement('input');
+                        fightsubmitBtn.setAttribute('type', 'submit');
+                        fightsubmitBtn.textContent = 'Submit Fight Details';
+
+                        const elementLabel = document.createElement('h5');
+                        elementLabel.textContent = "Rate this fight";
+                        const selectElement = document.createElement('select');
+                        selectElement.append(elementLabel);
+                        selectElement.setAttribute('name', '1-10');
+                        selectElement.setAttribute('class', 'rating')
+
+                        const option1 = document.createElement('option');
+                        option1.setAttribute('value', '1');
+                        option1.textContent = '1';
+
+                        const option2 = document.createElement('option');
+                        option2.setAttribute('value', '2');
+                        option2.textContent = '2';
+
+                        const option3 = document.createElement('option');
+                        option3.setAttribute('value', '3');
+                        option3.textContent = '3';
+
+                        const option4 = document.createElement('option');
+                        option4.setAttribute('value', '4');
+                        option4.textContent = '4';
+
+                        const option5 = document.createElement('option');
+                        option5.setAttribute('value', '5');
+                        option5.textContent = '5';
+
+                        const option6 = document.createElement('option');
+                        option6.setAttribute('value', '6');
+                        option6.textContent = '6';
+
+                        const option7 = document.createElement('option');
+                        option7.setAttribute('value', '7');
+                        option7.textContent = '7';
+
+                        const option8 = document.createElement('option');
+                        option8.setAttribute('value', '8');
+                        option8.textContent = '8';
+
+                        const option9 = document.createElement('option');
+                        option9.setAttribute('value', '9');
+                        option9.textContent = '9';
+
+                        const option10 = document.createElement('option');
+                        option10.setAttribute('value', '10');
+                        option10.textContent = '10';
+
+                        selectElement.append(option1, option2, option3, option4, option5, option6, option7, option8, option9, option10);
+
+                        fightForm.append(fightDetails, fightInput, fightWinner, fightWinnerInput, fightHighlightUrl, fightHighlightUrlInput, selectElement, fightsubmitBtn);
+                        
+                        fightForm.addEventListener('submit', (event) => {
+                            event.preventDefault();
+
+                            const tempFightInput = document.querySelector('.fight-input').value;
+                            const tempWinnerInput = document.querySelector('.fight-winner').value;
+                            const temphighlightInput = document.querySelector('.fight-url').value;
+                            const tempRatings = document.querySelector('.rating').value;
+
+                            const h4 = document.createElement('h4');
+                            h4.setAttribute('style', 'white-space: pre;');
+                            h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                                   
                             h4_29 = h4;
                             container_29.append(h4_29);
@@ -3784,7 +3883,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_29);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_29);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_29);
 
 
                 } else if (logo.name === teamData.teams[30].name) {
@@ -3796,6 +3895,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[30].conference.name} (${teamData.teams[30].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[30].teamStats[0].splits[1].stat.pts} (${teamData.teams[30].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -3899,7 +4001,7 @@ fetch('http://localhost:3000/logos')
                             const h4 = document.createElement('h4');
                             h4.setAttribute('style', 'white-space: pre;');
                             h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                            h4.textContent += `Highlights: (${temphighlightInput})     Description: ${tempFightInput}`;
+                            h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                             
                             h4_30 = h4;
                             container_30.append(h4_30);
@@ -3910,7 +4012,7 @@ fetch('http://localhost:3000/logos')
                         })
                         showData.append(fightForm, container_30);
                     })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_30);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_30);
 
                 } else if (logo.name === teamData.teams[31].name) {
                     const h3 = document.createElement('h3');
@@ -3921,6 +4023,9 @@ fetch('http://localhost:3000/logos')
                     
                     const h3_2 = document.createElement('h3');
                     h3_2.textContent = `${teamData.teams[31].conference.name} (${teamData.teams[31].division.name})`;
+                    
+                    const h3_4 = document.createElement('h3');
+                    h3_4.textContent = ` League Rank: ${teamData.teams[31].teamStats[0].splits[1].stat.pts} (${teamData.teams[31].teamStats[0].splits[0].stat.pts} points)`;
                     
                     const h3_3 = document.createElement('h3');
                     h3_3.textContent = 'Fight History - '
@@ -4031,7 +4136,7 @@ fetch('http://localhost:3000/logos')
                         const h4 = document.createElement('h4');
                         h4.setAttribute('style', 'white-space: pre;');
                         h4.textContent = `Winner: ${tempWinnerInput}    Rating: ${tempRatings}/10 \r\n`;
-                        h4.textContent += `Highlights: (${p})     Description: ${tempFightInput}`;
+                        h4.textContent += `Highlights: ${temphighlightInput}     Description: ${tempFightInput}`;
                         
                         h4_31 = h4;
                         container_31.append(h4_31);
@@ -4042,7 +4147,7 @@ fetch('http://localhost:3000/logos')
                     })
                     showData.append(fightForm, container_31);
                 })
-                showData.append(h2, h3_2, h3, h3_3, fightIncrementer, fightNumber, container_31);
+                showData.append(h2, h3_2, h3_4, h3, h3_3, fightIncrementer, fightNumber, container_31);
                 }
                   else  {showData.append(' \n something')}
             })

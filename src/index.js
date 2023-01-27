@@ -654,8 +654,8 @@ fetch('http://localhost:3000/logos')
 
                             h4_3 = h4;
                             span_3 = span
-                            container_3.append(h4_3);
-                            showData.append(container_3, span_3);
+                            container_3.append(h4_3, span_3);
+                            showData.append(container_3);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -787,8 +787,8 @@ fetch('http://localhost:3000/logos')
 
                             span_4 = span;
                             h4_4 = h4;
-                            container_4.append(h4_4);
-                            showData.append(container_4, span_4);
+                            container_4.append(h4_4, span_4);
+                            showData.append(container_4);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -920,8 +920,8 @@ fetch('http://localhost:3000/logos')
 
                             span_5 = span;
                             h4_5 = h4;
-                            container_5.append(h4_5);
-                            showData.append(container_5, span_5);
+                            container_5.append(h4_5, span_5);
+                            showData.append(container_5);
 
                             fightForm.reset();
                             fightForm.textContent = "";
@@ -1053,8 +1053,8 @@ fetch('http://localhost:3000/logos')
 
                             h4_6 = h4;
                             span_6 = span;
-                            container_6.append(h4_6);
-                            showData.append(container_6, span_6);
+                            container_6.append(h4_6, span_6);
+                            showData.append(container_6);
 
                             fightForm.reset();                           
                             fightForm.textContent = "";

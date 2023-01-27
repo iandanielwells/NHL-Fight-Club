@@ -520,8 +520,8 @@ fetch('http://localhost:3000/logos')
 
                         h4_2 = h4;
                         span_2 = span
-                        container_2.append(h4_2);
-                        showData.append(container_2, span_2);
+                        container_2.append(h4_2, span_2);
+                        showData.append(container_2);
 
                         fightForm.reset();
                         fightForm.textContent = "";
